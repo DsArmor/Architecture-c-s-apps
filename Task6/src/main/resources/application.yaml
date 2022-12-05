@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/graph_spring"
+    username: "argoc"
+    password: "123"
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.PostgreSQLDialect"
+  graphql:
+    graphiql:
+      enabled: true

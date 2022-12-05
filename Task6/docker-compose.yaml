@@ -1,0 +1,14 @@
+version: "3"
+services:
+  postgres:
+    image: 'postgres:12.3-alpine'
+    ports:
+      - '5432:5432'
+    restart: always
+    environment:
+      PGDATA: "/var/lib/postgresql/data/graph_spring"
+      POSTGRES_DB: "graph_spring"
+      POSTGRES_USER: "argoc"
+      POSTGRES_PASSWORD: "123"
+    volumes:
+      - ./postgres:/docker-entrypoint-initdb.d:ro
